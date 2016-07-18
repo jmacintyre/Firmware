@@ -57,10 +57,10 @@ if(NOT ${BOARD} STREQUAL "sim")
 
 	px4_nuttx_add_romfs(OUT romfs
 		ROOT ${romfs_dir}
-		# EXTRAS ${extras}
+		EXTRAS ${extras}
 		)
 	if (config_io_board)
-	    # add_dependencies(romfs fw_io)
+	    add_dependencies(romfs fw_io)
 	endif()
 
 	set(fw_file ${CMAKE_CURRENT_BINARY_DIR}/${OS}-${BOARD}-${LABEL}.px4)
