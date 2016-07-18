@@ -159,6 +159,10 @@ px4fmu-v2_test:
 px4fmu-v4_default:
 	$(call cmake-build,nuttx_px4fmu-v4_default)
 
+# New make target for FRDM-K64F support
+px4-freedom-k64f_default:
+	$(call cmake-build,nuttx-px4-freedom-k64f_default)
+
 px4-stm32f4discovery_default:
 	$(call cmake-build,nuttx_px4-stm32f4discovery_default)
 
