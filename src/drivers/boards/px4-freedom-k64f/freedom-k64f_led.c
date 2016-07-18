@@ -41,7 +41,7 @@
 
 #include <stdbool.h>
 
-#include "stm32.h"
+#include "kinetis.h"
 #include "board_config.h"
 
 #include <arch/board/board.h>

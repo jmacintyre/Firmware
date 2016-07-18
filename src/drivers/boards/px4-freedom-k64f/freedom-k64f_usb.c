@@ -32,7 +32,7 @@
  ****************************************************************************/
 
 /**
- * @file px4fmu_usb.c
+ * @file kinetis_usb.c
  *
  * Board-specific USB functions.
  */
@@ -52,7 +52,7 @@
 #include <nuttx/usb/usbdev_trace.h>
 
 #include <up_arch.h>
-#include <stm32.h>
+#include <kinetis.h>
 #include "board_config.h"
 
 /************************************************************************************
@@ -75,7 +75,7 @@
  *
  ************************************************************************************/
 
-__EXPORT void stm32_usbinitialize(void)
+__EXPORT void kinetis_usbinitialize(void)
 {
 	/* The OTG FS has an internal soft pull-up */
 
@@ -94,14 +94,14 @@ __EXPORT void stm32_usbinitialize(void)
  * Name:  stm32_usbsuspend
  *
  * Description:
- *   Board logic must provide the stm32_usbsuspend logic if the USBDEV driver is
+ *   Board logic must provide the kinetis_usbsuspend logic if the USBDEV driver is
  *   used.  This function is called whenever the USB enters or leaves suspend mode.
  *   This is an opportunity for the board logic to shutdown clocks, power, etc.
  *   while the USB is suspended.
  *
  ************************************************************************************/
 
-__EXPORT void stm32_usbsuspend(FAR struct usbdev_s *dev, bool resume)
+__EXPORT void kinetis_usbsuspend(FAR struct usbdev_s *dev, bool resume)
 {
 	//ulldbg("resume: %d\n", resume);
 }
