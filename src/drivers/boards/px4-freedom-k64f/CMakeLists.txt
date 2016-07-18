@@ -35,15 +35,8 @@
 
 px4_add_module(
 	MODULE drivers__boards__px4-freedom-k64f
-	COMPILE_FLAGS
-		-Os
 	SRCS
-		../common/board_name.c
-		../common/board_dma_alloc.c
-		freedom-k64f_can.c
 		freedom-k64f_init.c
-		freedom-k64f_timer_config.c
-		freedom-k64f_spi.c
 		freedom-k64f_usb.c
 		freedom-k64f_led.c
 	DEPENDS

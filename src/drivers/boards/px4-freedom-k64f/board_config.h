@@ -50,7 +50,7 @@
 __BEGIN_DECLS
 
 /* these headers are not C++ safe */
-#include <stm32.h>
+#include <freedom-k64f.h>
 #include <arch/board/board.h>
 
 #define UDID_START		0x1FFF7A10
