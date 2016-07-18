@@ -155,6 +155,10 @@
 /* no GPIO driver on the PX4_STM32F4DISCOVERY board */
 #endif
 
+ #ifdef CONFIG_ARCH_BOARD_PX4_FREEDOM-K64F
+/* no GPIO driver on the PX4_FREEDOM-K64F board */
+#endif
+
 #ifdef CONFIG_ARCH_BOARD_SITL
 /* no GPIO driver on the SITL configuration */
 #endif
@@ -164,7 +168,7 @@
 	!defined(CONFIG_ARCH_BOARD_AEROCORE) && !defined(CONFIG_ARCH_BOARD_PX4_STM32F4DISCOVERY) && \
 	!defined(CONFIG_ARCH_BOARD_MINDPX_V2) && \
 	!defined(CONFIG_ARCH_BOARD_PX4FMU_V4) && !defined(CONFIG_ARCH_BOARD_SITL) && \
-	!defined(CONFIG_ARCH_BOARD_TAP_V1)
+	!defined(CONFIG_ARCH_BOARD_TAP_V1) && !defined(CONFIG_ARCH_BOARD_PX4_FREEDOM-K64F)
 # error No CONFIG_ARCH_BOARD_xxxx set
 #endif
 /*
