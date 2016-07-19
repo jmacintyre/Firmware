@@ -103,6 +103,6 @@ __EXPORT void kinetis_usbinitialize(void)
 
 __EXPORT void kinetis_usbsuspend(FAR struct usbdev_s *dev, bool resume)
 {
-	//ulldbg("resume: %d\n", resume);
+	ulldbg("resume: %d\n", resume);
 }
 

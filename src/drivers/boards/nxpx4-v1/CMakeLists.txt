@@ -34,11 +34,11 @@
 # TODO: Need to check these SRCS for support
 
 px4_add_module(
-	MODULE drivers__boards__px4-freedom-k64f
+	MODULE drivers__boards__nxpx4-v1
 	SRCS
-		freedom-k64f_init.c
-		freedom-k64f_usb.c
-		freedom-k64f_led.c
+		nxpx4-v1_init.c
+		nxpx4-v1_usb.c
+		nxpx4-v1_led.c
 	DEPENDS
 		platforms__common
 	)

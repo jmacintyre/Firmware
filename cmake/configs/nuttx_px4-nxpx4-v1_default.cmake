@@ -7,7 +7,7 @@ include(nuttx/px4_impl_nuttx)
  	# Board support modules
  	#
  	drivers/device
- 	drivers/stm32
+ 	drivers/freedom-k64f
  	drivers/led
  	drivers/boards/nxpx4-v1
  

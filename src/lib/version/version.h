@@ -63,8 +63,8 @@ __END_DECLS
 #  define	HW_ARCH "RPI"
 #elif defined(CONFIG_ARCH_BOARD_BEBOP)
 #  define	HW_ARCH "BEBOP"
-#elif defined(CONFIG_ARCH_BOARD_FRDM-K64F)
-#  define	HW_ARCH "FRDM-K64F"
+#elif defined(CONFIG_ARCH_BOARD_NXPX4_V1)
+#  define	HW_ARCH "NXPX4_V1"
 #else
 #define HW_ARCH (board_name())
 #endif
