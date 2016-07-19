@@ -1,10 +1,10 @@
 {
     "board_id": 23, 
-    "magic": "NXPX4v1", 
-    "description": "Firmware for the FRDM-K64F board", 
+    "magic": "NXPX4-v1", 
+    "description": "Firmware for the NXPX4", 
     "image": "", 
     "build_time": 0, 
-    "summary": "PX4/Freedom-K64F",
+    "summary": "NXPX4-V1",
     "version": "0.1",
     "image_size": 0,
     "git_identity": "",
