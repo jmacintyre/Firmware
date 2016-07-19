@@ -160,7 +160,7 @@ px4fmu-v4_default:
 	$(call cmake-build,nuttx_px4fmu-v4_default)
 
 nxpx4-v1_default:
-	$(call cmake-build,nuttx-nxpx4-v1_default)
+	$(call cmake-build,nuttx_nxpx4-v1_default)
 
 px4-stm32f4discovery_default:
 	$(call cmake-build,nuttx_px4-stm32f4discovery_default)
