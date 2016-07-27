@@ -7,6 +7,7 @@
 [submodule "NuttX"]
 	path = NuttX
 	url = git@github.com:jmacintyre/PX4NuttX.git
+    branch = nxp-k64
 [submodule "src/modules/uavcan/libuavcan"]
 	path = src/modules/uavcan/libuavcan
 	url = https://github.com/UAVCAN/libuavcan.git
