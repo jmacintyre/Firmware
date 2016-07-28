@@ -1,7 +1,6 @@
 /****************************************************************************
  *
  *   Copyright (c) 2013 PX4 Development Team. All rights reserved.
- *   Author: Anton Babushkin <anton.babushkin@me.com>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -33,45 +32,67 @@
  ****************************************************************************/
 
 /**
- * @file version.h
+ * @file px4-frdmk64f_led.c
  *
- * Tools for system version detection.
- *
- * @author Anton Babushkin <anton.babushkin@me.com>
+ * PX4-FRDM-K64F LED backend.
  */
 
-#ifndef VERSION_H_
-#define VERSION_H_
+#include <px4_config.h>
 
-/* The preferred method for publishing a board name up is to
- * provide board_name()
- *
+#include <stdbool.h>
+
+#include "kinetis.h"
+#include "board_config.h"
+
+#include <nuttx/board.h>
+
+/*
+ * Ideally we'd be able to get these from up_internal.h,
+ * but since we want to be able to disable the NuttX use
+ * of leds for system indication at will and there is no
+ * separate switch, we need to build independent of the
+ * CONFIG_ARCH_LEDS configuration switch.
  */
 __BEGIN_DECLS
-
-__EXPORT const char *board_name(void);
-
+extern void led_init(void);
+extern void led_on(int led);
+extern void led_off(int led);
+extern void led_toggle(int led);
 __END_DECLS
 
-#define FREEZE_STR(s) #s
-#define STRINGIFY(s) FREEZE_STR(s)
-#define FW_GIT STRINGIFY(GIT_VERSION)
-#define FW_BUILD_URI STRINGIFY(BUILD_URI)
+__EXPORT void board_autoled_initialize(void)
+{
+	/* Configure LED1 GPIO for output */
 
-#if defined(CONFIG_ARCH_BOARD_SITL)
-#  define	HW_ARCH "SITL"
-#elif defined(CONFIG_ARCH_BOARD_EAGLE)
-#  define	HW_ARCH "EAGLE"
-#elif defined(CONFIG_ARCH_BOARD_EXCELSIOR)
-#  define HW_ARCH "EXCELSIOR"
-#elif defined(CONFIG_ARCH_BOARD_RPI2) || defined(CONFIG_ARCH_BOARD_NAVIO2)
-#  define	HW_ARCH "RPI"
-#elif defined(CONFIG_ARCH_BOARD_BEBOP)
-#  define	HW_ARCH "BEBOP"
-#elif defined(CONFIG_ARCH_BOARD_PX4_FRDMK64F)
-#  define	HW_ARCH "PX4-FRDMK64F"
-#else
-#define HW_ARCH (board_name())
-#endif
+	kinetis_gpioconfig(GPIO_LED1);
+}
 
-#endif /* VERSION_H_ */
+__EXPORT void board_autoled_on(int led)
+
+{
+	if (led == 1) {
+		/* Pull down to switch on */
+		kinetis_gpiowrite(GPIO_LED1, false);
+	}
+}
+
+__EXPORT void board_autoled_off(int led)
+
+{
+	if (led == 1) {
+		/* Pull up to switch off */
+		kinetis_gpiowrite(GPIO_LED1, true);
+	}
+}
+
+__EXPORT void led_toggle(int led)
+{
+	if (led == 1) {
+		if (kinetis_gpioread(GPIO_LED1)) {
+			kinetis_gpiowrite(GPIO_LED1, false);
+
+		} else {
+			kinetis_gpiowrite(GPIO_LED1, true);
+		}
+	}
+}
