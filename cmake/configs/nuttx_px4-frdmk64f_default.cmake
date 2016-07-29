@@ -38,7 +38,6 @@ set(config_module_list
 	# Libraries
 	#
 	#lib/mathlib/CMSIS
-	lib/controllib
 	lib/mathlib
 	lib/mathlib/math/filter
 	lib/ecl
