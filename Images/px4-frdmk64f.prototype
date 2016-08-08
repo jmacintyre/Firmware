@@ -1,0 +1,12 @@
+{
+    "board_id": 64,
+    "magic": "frdm-k64f",
+    "description": "Firmware for the FRDM-K64F Flight Controller",
+    "image": "",
+    "build_time": 0,
+    "summary": "FRDM-K64F",
+    "version": "0.1",
+    "image_size": 0,
+    "git_identity": "",
+    "board_revision": 0
+}
