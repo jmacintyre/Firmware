@@ -8,9 +8,6 @@ set(config_module_list
     #
     # Board support modules
     #
-    drivers/device
-    drivers/stm32
-    drivers/led
     drivers/boards/px4-frdmk64f
 
     #
