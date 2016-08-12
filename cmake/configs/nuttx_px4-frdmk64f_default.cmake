@@ -47,7 +47,7 @@ set(config_module_list
     #lib/geo
     #lib/conversion
     #lib/DriverFramework/framework
-    platforms/nuttx
+    #platforms/nuttx
 
     # had to add for cmake, not sure why wasn't in original config
     platforms/common
