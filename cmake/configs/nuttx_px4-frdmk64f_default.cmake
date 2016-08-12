@@ -8,7 +8,11 @@ set(config_module_list
     #
     # Board support modules
     #
+    drivers/device
+    drivers/px4fmu
+    drivers/px4io
     drivers/boards/px4-frdmk64f
+    drivers/px4flow
 
     #
     # System commands

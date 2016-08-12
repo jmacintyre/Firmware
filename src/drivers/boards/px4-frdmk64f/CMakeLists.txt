@@ -34,6 +34,7 @@ px4_add_module(
     MODULE drivers__boards__px4-frdmk64f
     SRCS
         ../common/board_name.c
+		../common/board_dma_alloc.c
         px4-frdmk64f_init.c
         px4-frdmk64f_usb.c
         px4-frdmk64f_led.c
