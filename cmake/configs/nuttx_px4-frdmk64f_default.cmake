@@ -38,15 +38,15 @@ set(config_module_list
     #
     # Libraries
     #
-    lib/mathlib/CMSIS
-    lib/controllib
-    lib/mathlib
-    lib/mathlib/math/filter
-    lib/ecl
-    lib/external_lgpl
-    lib/geo
-    lib/conversion
-    lib/DriverFramework/framework
+    #lib/mathlib/CMSIS
+    #lib/controllib
+    #lib/mathlib
+    #lib/mathlib/math/filter
+    #lib/ecl
+    #lib/external_lgpl
+    #lib/geo
+    #lib/conversion
+    #lib/DriverFramework/framework
     platforms/nuttx
 
     # had to add for cmake, not sure why wasn't in original config
