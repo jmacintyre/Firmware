@@ -157,6 +157,7 @@
 
 #ifdef CONFIG_ARCH_BOARD_PX4_FRDMK64F
 /* no GPIO driver on the K64F board */
+#endif
 
 #ifdef CONFIG_ARCH_BOARD_SITL
 /* no GPIO driver on the SITL configuration */
