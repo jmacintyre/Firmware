@@ -17,15 +17,15 @@ set(config_module_list
     #
     # System commands
     #
-    systemcmds/bl_update
-    systemcmds/mixer
-    systemcmds/param
-    systemcmds/perf
-    systemcmds/reboot
-    systemcmds/top
-    systemcmds/config
-    systemcmds/nshterm
-    systemcmds/ver
+    #systemcmds/bl_update
+    #systemcmds/mixer
+    #systemcmds/param
+    #systemcmds/perf
+    #systemcmds/reboot
+    #systemcmds/top
+    #systemcmds/config
+    #systemcmds/nshterm
+    #systemcmds/ver
 
     #
     # Library modules
