@@ -8,46 +8,46 @@ set(config_module_list
     #
     # Board support modules
     #
-    #drivers/device
-    #drivers/px4fmu
-    #drivers/px4io
-    #drivers/boards/px4-frdmk64f
-    #drivers/px4flow
+    drivers/device
+    drivers/px4fmu
+    drivers/px4io
+    drivers/boards/px4-frdmk64f
+    drivers/px4flow
 
     #
     # System commands
     #
-    #systemcmds/bl_update
-    #systemcmds/mixer
-    #systemcmds/param
-    #systemcmds/perf
-    #systemcmds/reboot
-    #systemcmds/top
-    #systemcmds/config
-    #systemcmds/nshterm
-    #systemcmds/ver
+    systemcmds/bl_update
+    systemcmds/mixer
+    systemcmds/param
+    systemcmds/perf
+    systemcmds/reboot
+    systemcmds/top
+    systemcmds/config
+    systemcmds/nshterm
+    systemcmds/ver
 
     #
     # Library modules
     #
-    #modules/param
-    #modules/systemlib
-    #modules/systemlib/mixer
-    #modules/uORB
+    modules/param
+    modules/systemlib
+    modules/systemlib/mixer
+    modules/uORB
 
     #
     # Libraries
     #
-    #lib/mathlib/CMSIS
-    #lib/controllib
-    #lib/mathlib
-    #lib/mathlib/math/filter
-    #lib/ecl
-    #lib/external_lgpl
-    #lib/geo
-    #lib/conversion
-    #lib/DriverFramework/framework
-    #platforms/nuttx
+    lib/mathlib/CMSIS
+    lib/controllib
+    lib/mathlib
+    lib/mathlib/math/filter
+    lib/ecl
+    lib/external_lgpl
+    lib/geo
+    lib/conversion
+    lib/DriverFramework/framework
+    platforms/nuttx
 
     # had to add for cmake, not sure why wasn't in original config
     platforms/common
