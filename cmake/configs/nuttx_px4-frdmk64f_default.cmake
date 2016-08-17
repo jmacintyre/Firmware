@@ -17,23 +17,23 @@ set(config_module_list
     #
     # System commands
     #
-    #systemcmds/bl_update
-    #systemcmds/mixer
-    #systemcmds/param
-    #systemcmds/perf
-    #systemcmds/reboot
-    #systemcmds/top
-    #systemcmds/config
-    #systemcmds/nshterm
-    #systemcmds/ver
+    systemcmds/bl_update
+    systemcmds/mixer
+    systemcmds/param
+    systemcmds/perf
+    systemcmds/reboot
+    systemcmds/top
+    systemcmds/config
+    systemcmds/nshterm
+    systemcmds/ver
 
     #
     # Library modules
     #
-    #modules/param
-    #modules/systemlib
-    #modules/systemlib/mixer
-    #modules/uORB
+    modules/param
+    modules/systemlib
+    modules/systemlib/mixer
+    modules/uORB
 
     #
     # Libraries
